@@ -23,6 +23,9 @@ function App() {
 
   return (
     <div className="App">
+      <header>
+        <h1>SUTD Gym Tracker</h1>
+      </header>
       <Counter {...{db}} />
     </div>
   );

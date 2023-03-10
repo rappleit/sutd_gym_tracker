@@ -29,7 +29,7 @@ const Counter = ({
     
     return (
         <div className="counter">
-            <h1>Number of people in the gym:</h1>
+            <h3>Number of people in the gym:</h3>
             <h1>{numEntries-numExits}</h1>
         </div>
     );
