@@ -56,16 +56,17 @@ const ActivityLog = ({
 
     return (
         <div className="activityLog">
-            <h3>Activity</h3>
+            <h3>Recent Activity</h3>
             <div className="logContainer">
-            {
+            {(activities.length > 0) ?
                 activities.map((activity) => (
                     <div className="logEntry">
                     {(activity.type === "entry") ? <h2 className="enterIcon"><IoEnterOutline /></h2>: <h2 className="exitIcon"><IoExitOutline /></h2>}
                     <p>{activity.timestamp}</p>
                     <p className="logEntryText">Someone {(activity.type === "entry") ? "entered" : "exited"} the gym</p>
                 </div>
-                ))
+                )):
+                <p>No recent activity</p>
             }
                 
             </div>
