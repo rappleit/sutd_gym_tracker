@@ -3,6 +3,10 @@ import Counter from './components/counter';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase } from 'firebase/database';
+import Stats from './components/stats';
+import Sidebar from './components/Sidebar';
+import ActivityLog from './components/ActivityLog';
+import Topbar from './Topbar';
 
 function App() {
   const firebaseConfig = {
@@ -23,10 +27,16 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1>SUTD Gym Tracker</h1>
-      </header>
-      <Counter {...{db}} />
+      <Topbar />
+      <Sidebar />
+      <div className="content">
+        <section>
+          <Counter {...{db}}/>
+          <ActivityLog {...{db}}/>
+        </section>
+        
+        
+      </div>
     </div>
   );
 }

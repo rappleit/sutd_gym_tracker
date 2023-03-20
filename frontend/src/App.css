@@ -2,14 +2,10 @@
 
 
 .App {
-  text-align: center;
   font-family: 'Noto Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #222325;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 
@@ -17,10 +13,139 @@ h1 {
   font-weight: 700;
 }
 
+p {
+  font-size: 14px;
+}
+
+section {
+  display: flex;
+  gap: 32px;
+  height: 200px;
+}
+
+.sidebar {
+  display: block;
+  position: fixed;
+  height: 100%;
+  background-color: #222325;
+  color: #ffffff;
+  padding: 16px 32px;
+  width: 12em;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.sidebar a {
+  color:#b7cdf1;
+}
+
+.sidebar a:hover {
+  color: #ffffff;
+}
+
+.topBar {
+  display: none;
+  background-color: #222325;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+}
+
+.descContainer {
+  display: none;
+}
+
+.content {
+  margin: 30px 36px 32px 18em;
+  
+}
+
 .counter {
   background-color: #ffffff;
-  width: 30vw;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.2) 0px 8px 16px -8px;
+  width: 250px;
   border-radius: 8px;
   padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.activityLog {
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px 24px;
+}
+
+.activityLog h3 {
+  margin: 0;
+}
+
+.logContainer {
+  margin: 6px 0;
+}
+
+.logEntry {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #a8bee1;
+  padding: 8px 0;
+}
+
+.logEntry h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-size: 16px;
+}
+
+.enterIcon {
+  color: #34c372;
+}
+
+.exitIcon {
+  color: #c33434;
+}
+
+.logEntry p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.logEntryText {
+  font-weight: 600;
+}
+
+.stats {
+  margin: 32px 0;
+}
+
+@media (max-width: 768px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar {
+    display: none;
+  }
+  .topBar {
+    display: block;
+  }
+  .content {
+    margin: 48px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .counter {
+    width: 50%;
+  }
 }
